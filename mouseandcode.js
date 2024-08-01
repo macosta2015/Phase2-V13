@@ -1,4 +1,4 @@
-// July 28th
+// August 1st
 
 const puppeteer = require('puppeteer');
 require('dotenv').config();
@@ -10,15 +10,14 @@ const copySketchFunction = require('./components/copySketchFunction.js');
 const pasteIntoSketchFunction = require('./components/pasteIntoSketchFunction.js');
 const editIntoSketchFunction = require('./components/editIntoSketchFunction.js');
 const renameIntoSketchFunction = require('./components/renameIntoSketchFunction.js');
-require('events').EventEmitter.defaultMaxListeners = 20;
+// require('events').EventEmitter.defaultMaxListeners = 20;
 const searchAndClickTransform = require('./components/searchAndClickTransform.js');
 const searchAndClickCustomExtrude2 = require('./components/searchAndClickCustomExtrude2.js');
 const searchAndClickExtrude = require('./components/searchAndClickExtrude.js');
 const { performRightClickOptionByTitle } = require('./components/performRightClickOptionByTitle.js');
 
-//GOOD WORKING const waitForEnter = require('./components/waitForEnter.js');
 const waitForEnter = require('./components/waitForEnter.js');
-// Set the maximum number of listeners
+require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum number of listeners
 
 
 (async () => {
@@ -54,6 +53,7 @@ const waitForEnter = require('./components/waitForEnter.js');
 
 
         ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)
+        ////////////////////////////////////////////////////////////////////////////
         await newPage.keyboard.press('Enter');
         console.log('await newPage.keyboard.press')
         const desiredIndex7 = 7;
@@ -80,18 +80,14 @@ const waitForEnter = require('./components/waitForEnter.js');
         console.log("LLLLLLLLLLLLL");
 
 
-        ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)
-        //commented out
-        // await newPage.keyboard.press('Enter');
-        // console.log('await newPage.keyboard.press')
-
-
         //Select index
         const desiredIndex8 = 8;
         await clickButtonByIndex(newPage, desiredIndex8);
         console.log("MMMMMMMMMMMMM");
         await waitForEnter();
         console.log("NNNNNNNNNNN");
+        ////////////////////////////////////////////////////////////////////////////
+
 
 
         //Working on (4) Extrude 2
@@ -107,10 +103,6 @@ const waitForEnter = require('./components/waitForEnter.js');
         await waitForEnter();
         console.log("PPPPPPPPPP");
         editIntoSketchFunction(editOptions8, newPage);
-        ////////////////////////////////////////////////////////////////////////////
-
-
-        ////////////////////////////////////////////////////////////////////////////
         console.log("QQQQQQQQQQQ");
         await waitForEnter();
         console.log("RRRRRRRRRRR");
@@ -129,7 +121,6 @@ const waitForEnter = require('./components/waitForEnter.js');
         console.log('copySketchFunction')
         copySketchFunction(editOptions1, newPage);
         // Select sketch to click or unclick, good code to select and unselect
-
         console.log("PASTE INTO SKETCH");
         await waitForEnter();
         //We get an error here, because the title7 and selector7 just changed. 
@@ -143,10 +134,6 @@ const waitForEnter = require('./components/waitForEnter.js');
         console.log("DDDDDDDDDD");
         pasteIntoSketchFunction(editOptions20, newPage);
         ////////////////////////////////////////////////////////////////////////////
-
-        ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)
-        // const desiredIndex7 = 7;
-        // await clickButtonByIndex(newPage, desiredIndex7);
         console.log("Before searchAndClickTransform");
         await waitForEnter();
         console.log("Before editIntoSketchFunction");
@@ -163,6 +150,7 @@ const waitForEnter = require('./components/waitForEnter.js');
         console.log("After searchAndClickTransform");
         await waitForEnter();
         console.log("After searchAndClickTransform");
+        ////////////////////////////////////////////////////////////////////////////
 
 
         //Working on (5) Extrude 3 PLAY(2.00)
@@ -205,16 +193,8 @@ const waitForEnter = require('./components/waitForEnter.js');
         console.log("ZZZZZZZZZZZ");
 
 
-
-
-
-
-
-
         ////////////////////////////////////////////////////////////////////////////
         // WORKING ON NEW CODE
-        // const selector1 = 'div[data-id="Dg4JdGx6jlZTm4XD"]'; // Replace with the appropriate selector
-        // const title1 = '(1) Initial Sketch'; // Replace with the desired title
         console.log('Right-clicking on the specified element.');
         const editOptions2 = await performRightClickOptionByTitle(newPage, selector1, title1);
         console.log(editOptions2);
@@ -230,7 +210,6 @@ const waitForEnter = require('./components/waitForEnter.js');
         console.log("CCCCCCCCCC");
         await waitForEnter();
         console.log("DDDDDDDDDD");
-
         console.log("PASTE INTO SKETCH");
         await waitForEnter();
         //We get an error here, because the title7 and selector7 just changed. 
@@ -244,16 +223,8 @@ const waitForEnter = require('./components/waitForEnter.js');
         console.log("DDDDDDDDDD");
         pasteIntoSketchFunction(editOptions22, newPage);
         ////////////////////////////////////////////////////////////////////////////
-
-
-        // ///////WORKING, NEED TO CHANGE THE (3) Extrude Sketch(1.03)
-        // // const desiredIndex7 = 7;
-        // await clickButtonByIndex(newPage, desiredIndex7);
         console.log("Before searchAndClickTransform");
         await waitForEnter();
-        // console.log("Before editIntoSketchFunction");
-        // //editIntoSketchFunction(editOptions8, newPage);
-        // const title23 = '(3) Extrude Sketch(1.03)'; // Replace with the desired title
         const editOptions23 = await performRightClickOptionByTitle(newPage, selector10, title22);
         editIntoSketchFunction(editOptions23, newPage);
         ////////////////////////////////////////////////////////////////////////////
@@ -265,36 +236,7 @@ const waitForEnter = require('./components/waitForEnter.js');
         console.log("After searchAndClickTransform");
         await waitForEnter();
         console.log("After searchAndClickTransform");
-
-
-
-
-
-
-
-
-
-
         ////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         //Working on Extrude 1
@@ -346,29 +288,6 @@ const waitForEnter = require('./components/waitForEnter.js');
         await waitForEnter();
         console.log("JJJJJJJJJJJ");
         editIntoSketchFunction(editOptions13, newPage);
-        ////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         // Select sketch to click or unclick again
@@ -459,9 +378,6 @@ const waitForEnter = require('./components/waitForEnter.js');
         await waitForEnter();
         ////////////////////
         console.log("XXXXXXXXXX")
-
-
-
 
 
         //MOVING TO THE THIRD SKETCH
