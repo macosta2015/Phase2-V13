@@ -418,12 +418,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
 
 
 
-
-
-
-
-
-
         console.log("QQQQQQQQQQQ")
         // RIGHT CLICK
         //ALL THE FOLLOWING CODE NEEDS TO GO TOGETHER
@@ -480,7 +474,7 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
 
 
 
-
+        ////////////////////////////////////////////////////////////////////////////
         //SELECT SKETCH TO CLICK OR UNCLICK, THIS CODE IS REALLY IMPORTANT
         console.log('Waiting 10 seconds.');
         console.log('SELECTING ITEM 5 ON THE LIST.');
@@ -543,27 +537,10 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         console.log('After waiting for the transform function')
 
 
-
-
-
         ////////////////////
         await waitForEnter();
         console.log("LLLLLLLLLLLLLLLLL")
         ////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         await newPage.evaluate(() => {
