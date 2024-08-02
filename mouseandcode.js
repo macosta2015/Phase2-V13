@@ -79,13 +79,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         await waitForEnter();
         console.log("LLLLLLLLLLLLL");
 
-
-        //Select index
-        const desiredIndex8 = 8;
-        await clickButtonByIndex(newPage, desiredIndex8);
-        console.log("MMMMMMMMMMMMM");
-        await waitForEnter();
-        console.log("NNNNNNNNNNN");
         ////////////////////////////////////////////////////////////////////////////
 
 
