@@ -70,17 +70,13 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         console.log("IIIIIIIIIIII");
         await waitForEnter();
         console.log("JJJJJJJJJJJJJ");
-
-
         editIntoSketchFunction(editOptions7, newPage);
+        ////////////////////////////////////////////////////////////////////////////
 
 
         console.log("KKKKKKKKKKKKKK");
         await waitForEnter();
         console.log("LLLLLLLLLLLLL");
-
-        ////////////////////////////////////////////////////////////////////////////
-
 
 
         //Working on (4) Extrude 2
@@ -96,9 +92,14 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         await waitForEnter();
         console.log("PPPPPPPPPP");
         editIntoSketchFunction(editOptions8, newPage);
+        ////////////////////////////////////////////////////////////////////////////
+
+
         console.log("QQQQQQQQQQQ");
         await waitForEnter();
         console.log("RRRRRRRRRRR");
+
+
         //Working on (2) Extrude 1(4.00)
         const selector1 = 'div[data-id="Dg4JdGx6jlZTm4XD"]'; // Replace with the appropriate selector
         const title1 = '(1) Initial Sketch'; // Replace with the desired title
@@ -108,9 +109,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         console.log("CCCCCCCCCC");
         await waitForEnter();
         console.log("DDDDDDDDDD");
-        // console.log('editIntoSketchFunction')
-        // editIntoSketchFunction(editOptions1, newPage);
-        // Use the retrieved options for further actions (e.g., copySketchFunction)
         console.log('copySketchFunction')
         copySketchFunction(editOptions1, newPage);
         // Select sketch to click or unclick, good code to select and unselect
@@ -138,7 +136,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         console.log("After editIntoSketchFunction");
         await waitForEnter();
         console.log("Before searchAndClickTransform");
-        ////////WORKING CODE
         await searchAndClickTransform(newPage);
         console.log("After searchAndClickTransform");
         await waitForEnter();
@@ -284,7 +281,7 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
 
 
         // Select sketch to click or unclick again
-        console.log('Waiting 10 seconds.');
+        console.log('Select sketch to click or unclick again');
         await new Promise(resolve => setTimeout(resolve, 10000)); // Wait for 10 seconds
         await newPage.evaluate(() => {
             const thirdButton = document.querySelectorAll('.os-list-item-name')[5];
